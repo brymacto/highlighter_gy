@@ -1,6 +1,6 @@
 $(document).ready(function() {
   rangy.init();
-  highlighter = rangy.createHighlighter($('#doc_contents')[0]);
+  highlighter = rangy.createHighlighter();
   applier = rangy.createClassApplier("highlight");
   highlighter.addClassApplier(rangy.createClassApplier("highlight", {
     ignoreWhiteSpace: true,
@@ -27,7 +27,7 @@ $('article').on('mouseup', function(e) {
        $('#addHighlight').on('click', function(e) {
          
         e.preventDefault();
-        highlightSelectedText
+        highlightSelectedText()
         $('#highlightCreatePopover').hide();
          // printAllHighlights();
          // hideHighlighterMenus();
